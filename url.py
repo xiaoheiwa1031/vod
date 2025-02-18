@@ -207,9 +207,10 @@ def main():
         print(f"更新过程出错: {str(e)}")
         return False
 
-if name == "main":
+if __name__ == "__main__":
     ret = main()
     if ret:
-        requests.get('https://cat.cwyml.cn:82/test/del/redirect', {
-            'token': 'hwhyxxwx'
-        }, verify=False)
+        try:
+            requests.get('https://cat.cwyml.cn:82/test/del/redirect', {
+                'token': 'hwhyxxwx'
+            }, verify=False)
