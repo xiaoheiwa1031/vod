@@ -210,6 +210,13 @@ def main():
 if __name__ == "__main__":
     ret = main()
     if ret:
-            requests.get('https://cat.cwyml.cn:82/test/del/redirect', {
-                'token': 'hwhyxxwx'
+        try:
+            response = requests.get('https://https://cat.cwyml.cn:82/test/del/redirect', params={
+                'token': '123'
             }, verify=False)
+            if response.status_code == 200:
+                print("重定向测试请求成功。")
+            else:
+                print(f"重定向测试请求失败，状态码为 {response.status_code}。")
+        except requests.RequestException as e:
+            print(f"发起重定向测试请求时出错: {str(e)}")
