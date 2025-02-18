@@ -212,7 +212,7 @@ if __name__ == "__main__":
     if ret:
         try:
             response = requests.get('https://cat.cwyml.cn:82/test/del/redirect', params={
-                'token': '123'
+                'token': 'hwhyxxwx'
             }, verify=False)
             if response.status_code == 200:
                 print("重定向测试请求成功。")
