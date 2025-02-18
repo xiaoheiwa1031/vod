@@ -211,7 +211,7 @@ if __name__ == "__main__":
     ret = main()
     if ret:
         try:
-            response = requests.get('https://https://cat.cwyml.cn:82/test/del/redirect', params={
+            response = requests.get('https://cat.cwyml.cn:82/test/del/redirect', params={
                 'token': '123'
             }, verify=False)
             if response.status_code == 200:
