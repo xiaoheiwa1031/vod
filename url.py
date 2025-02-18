@@ -210,7 +210,6 @@ def main():
 if __name__ == "__main__":
     ret = main()
     if ret:
-        try:
             requests.get('https://cat.cwyml.cn:82/test/del/redirect', {
                 'token': 'hwhyxxwx'
             }, verify=False)
